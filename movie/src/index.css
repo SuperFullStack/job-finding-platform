@@ -11,3 +11,38 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+img{
+  width:250px;
+  height:250px;
+}
+
+.minfo{
+  display:flex;
+  justify-content:center;
+  align-items: center;
+}
+
+.movie-container{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.movie-info{
+  margin:1rem;
+  width:250px;
+  background: rgb(218, 216, 216);
+  padding-bottom: 30px;
+  padding-left: 10px;
+  border-radius: 8px;
+  padding-right: 10px;
+}
+
+.overview{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
