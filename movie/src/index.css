@@ -46,3 +46,13 @@ img{
   justify-content: center;
   align-items: center;
 }
+
+header{
+  display:flex;
+  justify-content: center;
+  align-items:center;
+}
+
+ input[type="text"]{
+  background-color:black;
+}

@@ -12,7 +12,7 @@ export default function Movie({title,poster_path,overview,vote_average}) {
                 <div className="minfo">
                 <img src={imageurl + poster_path}/>
                 </div>
-                <h6>Ratings - {vote_average}</h6>
+                <h5>Ratings - {vote_average}</h5>
                 <div className="overview">
                     <h5>{overview}</h5>
                 </div>
