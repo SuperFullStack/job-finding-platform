@@ -1,4 +1,4 @@
-
+//movie application made with react and tmdb api
 import { useState } from 'react';
 import { useEffect } from 'react';
 import './App.css';
