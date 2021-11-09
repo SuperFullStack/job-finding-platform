@@ -3,9 +3,7 @@ import './App.css';
 import fetchJobs from './fetchJobs';
 import {Container} from 'react-bootstrap'
 
-
 function App() {
-
   const {jobs, loading, error}= fetchJobs();
   return (
    <Container>
