@@ -1,4 +1,5 @@
 import { useReducer, useEffect } from "react"
+import axios from "axios"
 
 const ACTIONS={
     MAKE_REQUEST: 'make-request',
