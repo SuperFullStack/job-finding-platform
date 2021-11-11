@@ -1,4 +1,4 @@
-import { useReducer } from "react"
+import { useReducer, useEffect } from "react"
 
 const ACTIONS={
     MAKE_REQUEST: 'make-request',
@@ -12,7 +12,7 @@ function reducer(state,action){
         case ACTIONS.GET_DATA:
             return {...state, loading:false, jobs:action.payload.jobs }
         case ACTIONS.ERROR:
-
+            return {...state, loading:false, jobs:action.payload.error, jobs:[] }
         default:
             return state
     }
@@ -21,6 +21,10 @@ function reducer(state,action){
 
 export default function fetchJobs(params, page){
     const [state,dispatch]=useReducer(reducer,{jobs:[],loading:true})
+
+    useEffect(()=>{
+        dispatch({type: ACTIONS.MAKE_REQUEST})
+    },[params,page])
     return {
         jobs:[],
         loading:false,
