@@ -6,6 +6,8 @@ const ACTIONS={
     GET_DATA:'get-data',
     ERROR:'error'
 }
+
+const base_url="";
 function reducer(state,action){
     switch(action.type){
         case ACTIONS.MAKE_REQUEST:
@@ -25,6 +27,7 @@ export default function fetchJobs(params, page){
 
     useEffect(()=>{
         dispatch({type: ACTIONS.MAKE_REQUEST})
+        axios.get()
     },[params,page])
     return {
         jobs:[],
