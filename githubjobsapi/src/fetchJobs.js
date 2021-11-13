@@ -27,7 +27,11 @@ export default function fetchJobs(params, page){
 
     useEffect(()=>{
         dispatch({type: ACTIONS.MAKE_REQUEST})
-        axios.get(base_url)
+        axios.get(base_url,{
+            params: {markdown:true, page:page, ...params}
+        }).then(res=>{
+          dispatch({type: ACTIONS.GET_DATA, payload:{jobs:res.data}})  
+        })
     },[params,page])
     return {
         jobs:[],
