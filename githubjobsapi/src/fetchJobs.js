@@ -7,7 +7,7 @@ const ACTIONS={
     ERROR:'error'
 }
 
-const base_url="";
+const base_url="https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json";
 function reducer(state,action){
     switch(action.type){
         case ACTIONS.MAKE_REQUEST:
@@ -27,7 +27,7 @@ export default function fetchJobs(params, page){
 
     useEffect(()=>{
         dispatch({type: ACTIONS.MAKE_REQUEST})
-        axios.get()
+        axios.get(base_url)
     },[params,page])
     return {
         jobs:[],
