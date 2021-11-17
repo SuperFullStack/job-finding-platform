@@ -5,6 +5,9 @@ function App() {
   return (
     <div>
       <Header/>
+        <div class="container">
+            <Balance/>
+        </div>
     </div>
   );
 }
