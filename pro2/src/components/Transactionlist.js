@@ -1,7 +1,11 @@
 import React from 'react'
 import { GlobalContext } from '../context/Globalstate'
+import { useContext } from 'react'
 
 export default function Transactionlist() {
+    const context=useContext(GlobalContext);
+
+    console.log(context);
     return (
         <>
             <h3>History</h3>
