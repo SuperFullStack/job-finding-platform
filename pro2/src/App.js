@@ -6,6 +6,7 @@ import IncomeExpense from './components/IncomeExpense'
 import Transactionlist from './components/Transactionlist'
 import Addtransaction from './components/Addtransaction'
 
+import {GlobalProvider} from './context/Globalstate'
 
 function App() {
   return (
