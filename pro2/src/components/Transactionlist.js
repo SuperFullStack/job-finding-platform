@@ -10,9 +10,10 @@ export default function Transactionlist() {
         <>
             <h3>History</h3>
             <ul id="list" class="list">
-                <li class="minus">
-                    Cash <span>$400</span><button class="delete-btn">X</button> 
-                </li>
+                {transactions.map(transaction=>(<li class="minus">
+                    {transaction.value} <span>$400</span><button class="delete-btn">X</button> 
+                </li>))}
+                
             </ul>
         </>
     )
