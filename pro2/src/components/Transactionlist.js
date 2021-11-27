@@ -11,7 +11,7 @@ export default function Transactionlist() {
             <h3>History</h3>
             <ul id="list" class="list">
                 {transactions.map(transaction=>(<li class="minus">
-                    {transaction.value} <span>$400</span><button class="delete-btn">X</button> 
+                    {transaction.text} <span>$400</span><button class="delete-btn">X</button> 
                 </li>))}
                 
             </ul>
