@@ -1,6 +1,9 @@
 import React from 'react'
+import { GlobalContext } from '../context/Globalstate'
+
 
 export default function IncomeExpense() {
+    const {transactions}=useContext(GlobalContext);
     return (
         <div class="inc-exp-container">
             <div>

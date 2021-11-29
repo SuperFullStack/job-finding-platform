@@ -1,5 +1,6 @@
 import React from 'react'
 import { GlobalContext } from '../context/Globalstate'
+import {useContext} from 'react'
 
 export default function Balance() {
     const {transactions}=useContext(GlobalContext);
