@@ -1,6 +1,6 @@
 import React from 'react'
 import { GlobalContext } from '../context/Globalstate'
-
+import { useContext } from 'react';
 
 export default function IncomeExpense() {
     const {transactions}=useContext(GlobalContext);
@@ -23,7 +23,7 @@ export default function IncomeExpense() {
             </div>
             <div>
                 <h4>Expense</h4>
-                <p id="money-minus" class="money minus">-$0.00</p>
+                <p id="money-minus" class="money minus">{expense}</p>
             </div>
         </div>
     )
