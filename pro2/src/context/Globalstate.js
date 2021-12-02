@@ -17,10 +17,10 @@ export const GlobalProvider=({children})=>{
 
 
     function deleteTransaction(id){
-        dispatch[{
+        dispatch({
             type:'DELETE_TRANSACTION',
             payload:id,
-        }];
+        });
     }
 
     return (<GlobalContext.Provider value={{
