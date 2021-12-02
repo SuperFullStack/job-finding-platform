@@ -11,8 +11,7 @@ export default function Transactionlist() {
         <>
             <h3>History</h3>
             <ul id="list" class="list">
-                {transactions.map(transaction=>(<Transaction key={transaction.id} transaction={transaction}/>))}
-                
+                {transactions.map(transaction=>(<Transaction key={transaction.id} transaction={transaction}/>))}     
             </ul>
         </>
     )
