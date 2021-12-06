@@ -22,20 +22,22 @@ function reducer(state,action){
 }
 
 
-export default function fetchJobs(params, page){
+export default function FetchJobs(params, page){
     const [state,dispatch]=useReducer(reducer,{ jobs:[], loading:true })
 
     useEffect(()=>{
-        dispatch({type: ACTIONS.MAKE_REQUEST})
-        axios.get(base_url,{
-            params: {markdown:true, page:page, ...params}
-        }).then(res=>{
-          dispatch({type: ACTIONS.GET_DATA, payload:{jobs:res.data}})  
-        })
+       console.log("Hello world")
+    dispatch({ type: ACTIONS.MAKE_REQUEST })
+    axios.get(base_url, {
+      params: { markdown: true, page: page, ...params }
+    }).then(res => {
+        console.log(res)
+      dispatch({ type: ACTIONS.GET_DATA, payload: { jobs: res.data } }) 
+    }).catch(e => {
+        console.log(e)
+      if (axios.isCancel(e)) return
+      dispatch({ type: ACTIONS.ERROR, payload: { error: e } }) 
+    })
     },[params,page])
-    return {
-        jobs:[],
-        loading:false,
-        error:false,
-    }
+    return state
 }
