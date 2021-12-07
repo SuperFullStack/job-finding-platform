@@ -19,6 +19,8 @@ export default function Addtransaction() {
         text,
         amount
       }
+
+      AddTransaction(newTransaction)
     }
 
     return (
