@@ -1,7 +1,10 @@
 import React from 'react'
 import { useState } from 'react'
+import { useContext } from 'react';
+import { GlobalContext } from '../context/Globalstate';
 
-export default function Addtrancsation() {
+
+export default function Addtransaction() {
   const [text,setText]= useState('');
   const[amount,setAmount]= useState(0);
 
