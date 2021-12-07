@@ -1,6 +1,7 @@
 import React from 'react'
 
 export default function Transaction({transaction}) {
+    const sign=transaction.amount<0?'-':'+';
     return (
         <div>
             <li class="minus">
