@@ -8,7 +8,9 @@ export default function Addtransaction() {
   const [text,setText]= useState('');
   const[amount,setAmount]= useState(0);
 
+  const {AddTransaction}=useContext(GlobalContext);
 
+  
     return (
         <>
         <h3>Add new transaction</h3>
